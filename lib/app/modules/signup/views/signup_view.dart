@@ -1,18 +1,18 @@
-import 'package:bcdx_11312136/app/controllers/auth_controller.dart';
-import 'package:bcdx_11312136/app/routes/app_pages.dart';
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
+import 'package:bcdx_11312136/app/controllers/auth_controller.dart';
+import 'package:bcdx_11312136/app/routes/app_pages.dart';
 
-import '../controllers/login_controller.dart';
+import '../controllers/signup_controller.dart';
 
-class LoginView extends GetView<LoginController> {
+class SignupView extends GetView<SignupController> {
   final cAuth = Get.find<AuthController>();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Login Screen'),
+        title: const Text('Signup View'),
         centerTitle: true,
       ),
       body: Container(
@@ -32,25 +32,14 @@ class LoginView extends GetView<LoginController> {
               ),
             ),
             SizedBox(
-              height: 10,
+              height: 20,
             ),
             ElevatedButton(
-              onPressed: () =>
-                  cAuth.login(controller.cEmail.text, controller.cPass.text),
-              child: Text("Login"),
-            ),
-            SizedBox(
-              height: 10,
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Text("Belum Punya Akun ?"),
-                TextButton(
-                  onPressed: () => Get.toNamed(Routes.SIGNUP),
-                  child: Text("Daftar Disini"),
-                )
-              ],
+              onPressed: () => cAuth.signup(
+                controller.cEmail.text,
+                controller.cPass.text,
+              ),
+              child: Text("Daftar"),
             ),
           ],
         ),
