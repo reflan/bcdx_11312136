@@ -1,13 +1,13 @@
 {
   "project_info": {
-    "project_number": "714419254384",
-    "project_id": "bcdx-11312136",
-    "storage_bucket": "bcdx-11312136.appspot.com"
+    "project_number": "82806746003",
+    "project_id": "ifa-11312136",
+    "storage_bucket": "ifa-11312136.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:714419254384:android:58e8fa5bdb245d212770b5",
+        "mobilesdk_app_id": "1:82806746003:android:5ab16cbdb0a818a8e45666",
         "android_client_info": {
           "package_name": "com.example.bcdx_11312136"
         }
@@ -15,7 +15,26 @@
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyDG7vLRAipekO9ec-5FQiBCXMpOfIC5ppo"
+          "current_key": "AIzaSyCRDYsmGtUHTD7dekjElFWuxhYYjsbkQtA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:82806746003:android:72f4d8ddf78ca823e45666",
+        "android_client_info": {
+          "package_name": "com.example.ifa_11312136"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCRDYsmGtUHTD7dekjElFWuxhYYjsbkQtA"
         }
       ],
       "services": {

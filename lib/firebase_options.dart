@@ -47,28 +47,28 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyBhznuRkYk1pVMpkF-MqNbAeSvO9NuWrVo',
-    appId: '1:714419254384:web:b618a849e658bf722770b5',
-    messagingSenderId: '714419254384',
-    projectId: 'bcdx-11312136',
-    authDomain: 'bcdx-11312136.firebaseapp.com',
-    storageBucket: 'bcdx-11312136.appspot.com',
+    apiKey: 'AIzaSyBIEzamDkjhrtD41WW-R_kuRd4yZMWERXA',
+    appId: '1:82806746003:web:78903178c79a0321e45666',
+    messagingSenderId: '82806746003',
+    projectId: 'ifa-11312136',
+    authDomain: 'ifa-11312136.firebaseapp.com',
+    storageBucket: 'ifa-11312136.appspot.com',
   );
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyDG7vLRAipekO9ec-5FQiBCXMpOfIC5ppo',
-    appId: '1:714419254384:android:58e8fa5bdb245d212770b5',
-    messagingSenderId: '714419254384',
-    projectId: 'bcdx-11312136',
-    storageBucket: 'bcdx-11312136.appspot.com',
+    apiKey: 'AIzaSyCRDYsmGtUHTD7dekjElFWuxhYYjsbkQtA',
+    appId: '1:82806746003:android:72f4d8ddf78ca823e45666',
+    messagingSenderId: '82806746003',
+    projectId: 'ifa-11312136',
+    storageBucket: 'ifa-11312136.appspot.com',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyANzcu2DPr2hEf_zn9LuQNq6geQgur1A00',
-    appId: '1:714419254384:ios:f043ba8dde416d172770b5',
-    messagingSenderId: '714419254384',
-    projectId: 'bcdx-11312136',
-    storageBucket: 'bcdx-11312136.appspot.com',
-    iosBundleId: 'com.example.bcdx11312136',
+    apiKey: 'AIzaSyDL5trkjuXYTXT2z6wxL3B-vyHIBwENax8',
+    appId: '1:82806746003:ios:1c874afde1db96d4e45666',
+    messagingSenderId: '82806746003',
+    projectId: 'ifa-11312136',
+    storageBucket: 'ifa-11312136.appspot.com',
+    iosBundleId: 'com.example.ifa11312136',
   );
 }
