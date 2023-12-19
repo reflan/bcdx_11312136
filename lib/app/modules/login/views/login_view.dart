@@ -1,3 +1,5 @@
+import 'dart:ffi';
+
 import 'package:bcdx_11312136/app/controllers/auth_controller.dart';
 import 'package:bcdx_11312136/app/routes/app_pages.dart';
 import 'package:flutter/material.dart';
@@ -45,7 +47,7 @@ class LoginView extends GetView<LoginController> {
             Align(
               alignment: Alignment.centerRight,
               child: TextButton(
-                onPressed: () => Get.toNamed(Routes.RESET_PASSWORD),
+                onPressed: ()=> Get.toNamed(Routes.RESET_PASSWORD),
                 child: Text("Reset Password"),
               ),
             ),

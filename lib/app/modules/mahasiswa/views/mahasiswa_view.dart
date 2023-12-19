@@ -1,3 +1,4 @@
+import 'package:bcdx_11312136/app/modules/mahasiswa/views/mahasiswa_update_view.dart';
 import 'package:bcdx_11312136/app/routes/app_pages.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
@@ -12,11 +13,20 @@ class MahasiswaView extends GetView<MahasiswaController> {
       SimpleDialog(
         children: [
           ListTile(
-            onTap: () {},
+            onTap: () {
+              Get.back();
+              Get.to(
+                MahasiswaUpdateView(),
+                arguments: id,
+              );
+            },
             title: Text('Update'),
           ),
           ListTile(
-            onTap: () {},
+            onTap: () {
+              Get.back();
+              controller.delete(id);
+            },
             title: Text('Delete'),
           ),
           ListTile(

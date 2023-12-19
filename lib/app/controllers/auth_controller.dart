@@ -1,6 +1,6 @@
+import 'package:bcdx_11312136/app/routes/app_pages.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:get/get.dart';
-import 'package:bcdx_11312136/app/routes/app_pages.dart';
 
 class AuthController extends GetxController {
   FirebaseAuth auth = FirebaseAuth.instance;
@@ -34,34 +34,26 @@ class AuthController extends GetxController {
     }
   }
 
-  void login(String emailAddress, String password) async {
+  void login(String email, String pass) async {
     try {
-      UserCredential myUser = await auth.signInWithEmailAndPassword(
-        email: emailAddress,
-        password: password,
+      final credential = await auth.signInWithEmailAndPassword(
+        email: email,
+        password: pass,
       );
-      if (myUser.user!.emailVerified) {
-        //untuk routing
-        Get.offAllNamed(Routes.HOME);
-      } else {
-        Get.defaultDialog(
-          title: "Verifikasi email",
-          middleText: "Harap verifikasi email terlebih dahulu",
-        );
-      }
+      Get.offAllNamed(Routes.HOME);
     } on FirebaseAuthException catch (e) {
       if (e.code == 'user-not-found') {
-        Get.defaultDialog(
-            title: "Terjadi kesalahan",
-            middleText: "No user found for that email.");
-
         print('No user found for that email.');
-      } else if (e.code == 'wrong-password') {
         Get.defaultDialog(
-            title: "Terjadi kesalahan",
-            middleText: "Wrong password provided for that user.");
-
+          title: "Proses Gagal",
+          middleText: "No user found for that email.",
+        );
+      } else if (e.code == 'wrong-password') {
         print('Wrong password provided for that user.');
+        Get.defaultDialog(
+          title: "Proses Gagal",
+          middleText: "Wrong password provided for that user.",
+        );
       }
     }
   }
@@ -94,4 +86,5 @@ class AuthController extends GetxController {
           title: "Terjadi kesalahan", middleText: "Email tidak valid");
     }
   }
+
 }

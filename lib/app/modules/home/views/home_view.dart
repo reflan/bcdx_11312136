@@ -1,9 +1,9 @@
 import 'package:bcdx_11312136/app/controllers/auth_controller.dart';
+import 'package:bcdx_11312136/app/modules/mahasiswa/views/mahasiswa_add_view.dart';
+import 'package:bcdx_11312136/app/modules/mahasiswa/views/mahasiswa_view.dart';
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
-import 'package:bcdx_11312136/app/controllers/auth_controller.dart';
-import 'package:bcdx_11312136/app/modules/mahasiswa/views/mahasiswa_view.dart';
 
 import '../controllers/home_controller.dart';
 
@@ -26,10 +26,26 @@ class _DasboardAdminState extends State<DasboardAdmin> {
   final cAuth = Get.find<AuthController>();
   int _index = 0;
   List<Map> _fragment = [
-    {'title': 'Dashboard', 'view': MahasiswaView()},
-    {'title': 'Data Mahasiswa', 'view': MahasiswaView()},
-    {'title': 'Data Dosen', 'view': MahasiswaView()},
-    {'title': 'Data Pegawai', 'view': MahasiswaView()},
+    {
+      'title': 'Dashboard',
+      'view': MahasiswaView(),
+      'add': () => MahasiswaAddView()
+    },
+    {
+      'title': 'Data Mahasiswa',
+      'view': MahasiswaView(),
+      'add': () => MahasiswaAddView()
+    },
+    {
+      'title': 'Data Dosen',
+      'view': MahasiswaView(),
+      'add': () => MahasiswaAddView()
+    },
+    {
+      'title': 'Data Pegawai',
+      'view': MahasiswaView(),
+      'add': () => MahasiswaAddView()
+    },
   ];
 
   @override
@@ -40,6 +56,12 @@ class _DasboardAdminState extends State<DasboardAdmin> {
         backgroundColor: Colors.teal,
         titleSpacing: 0,
         title: Text(_fragment[_index]['title']),
+        actions: [
+          IconButton(
+            onPressed: () => Get.to(_fragment[_index]['add']),
+            icon: Icon(Icons.add_circle_outline),
+          )
+        ],
       ),
       body: _fragment[_index]['view'],
     );
