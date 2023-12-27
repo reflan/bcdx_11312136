@@ -1,10 +1,12 @@
 import 'package:bcdx_11312136/app/controllers/auth_controller.dart';
 import 'package:bcdx_11312136/app/modules/mahasiswa/views/mahasiswa_add_view.dart';
 import 'package:bcdx_11312136/app/modules/mahasiswa/views/mahasiswa_view.dart';
+import 'package:bcdx_11312136/app/modules/mahasiswa2/views/mahasiswa2_view.dart';
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
 
+import '../../mahasiswa2/views/mahasiswa2_form_view.dart';
 import '../controllers/home_controller.dart';
 
 class HomeView extends GetView<HomeController> {
@@ -45,6 +47,11 @@ class _DasboardAdminState extends State<DasboardAdmin> {
       'title': 'Data Pegawai',
       'view': MahasiswaView(),
       'add': () => MahasiswaAddView()
+    },
+    {
+      'title': 'Data Mahasisiwa (http)',
+      'view': Mahasiswa2View(),
+      'add': () => Mahasiswa2FormView()
     },
   ];
 
@@ -143,6 +150,17 @@ class _DasboardAdminState extends State<DasboardAdmin> {
             },
             leading: Icon(Icons.people),
             title: Text('Data Pegawai'),
+            trailing: Icon(Icons.navigate_next),
+            iconColor: Colors.teal,
+            textColor: Colors.teal,
+          ),
+          ListTile(
+            onTap: () {
+              setState(() => _index = 4);
+              Get.back();
+            },
+            leading: Icon(Icons.people),
+            title: Text('Data Mahasiswa (http)'),
             trailing: Icon(Icons.navigate_next),
             iconColor: Colors.teal,
             textColor: Colors.teal,

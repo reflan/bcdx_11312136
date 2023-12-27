@@ -6,6 +6,8 @@ import '../modules/login/bindings/login_binding.dart';
 import '../modules/login/views/login_view.dart';
 import '../modules/mahasiswa/bindings/mahasiswa_binding.dart';
 import '../modules/mahasiswa/views/mahasiswa_view.dart';
+import '../modules/mahasiswa2/bindings/mahasiswa2_binding.dart';
+import '../modules/mahasiswa2/views/mahasiswa2_view.dart';
 import '../modules/reset_password/bindings/reset_password_binding.dart';
 import '../modules/reset_password/views/reset_password_view.dart';
 import '../modules/signup/bindings/signup_binding.dart';
@@ -43,6 +45,11 @@ class AppPages {
       name: _Paths.MAHASISWA,
       page: () => MahasiswaView(),
       binding: MahasiswaBinding(),
+    ),
+    GetPage(
+      name: _Paths.MAHASISWA2,
+      page: () => const Mahasiswa2View(),
+      binding: Mahasiswa2Binding(),
     ),
   ];
 }
